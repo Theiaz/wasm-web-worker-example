@@ -6,9 +6,10 @@
   </head>
   <body>
     <script type="module">
-      import init, { greet } from "./pkg/hello_wasm.js";
+      import init, { sum } from "./pkg/wasm_sum.js";
       init().then(() => {
-        greet("WebAssembly");
+        const summary = sum(1, 2);
+        console.log("Sum is:", summary);
       });
     </script>
   </body>
