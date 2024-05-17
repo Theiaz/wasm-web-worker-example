@@ -1,4 +1,15 @@
+if (window.Worker) {
+  const myWorker = new Worker(new URL("./worker.ts", import.meta.url), {
+    type: "module",
+  });
 
-import * as wasm from "hello-wasm";
+  myWorker.postMessage("Start");
+  console.log("Message posted to worker");
 
-wasm.greet("WebAssembly with npm");
+  myWorker.onmessage = (e: MessageEvent<String>) => {
+    console.log("Message received from worker", e.data);
+  };
+} else {
+  console.log("Your browser doesn't support web workers.");
+}
+export {};
