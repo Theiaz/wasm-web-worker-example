@@ -1,6 +1,11 @@
-onmessage = async (msg: MessageEvent<String>) => {
-  //   debugger;
-  console.log("Worker output with message:", msg.data);
+import * as wasm from "wasm-sum";
 
-  postMessage("Message from worker");
+onmessage = (msg: MessageEvent<{ number1: number; number2: number }>) => {
+  console.log("Worker is calculating with data...", msg.data);
+
+  debugger;
+  const sum = wasm.sum(1, 2);
+  debugger;
+
+  postMessage(3);
 };

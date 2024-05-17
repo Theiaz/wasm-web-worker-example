@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "hello-wasm": "file:../pkg"
+    "wasm-sum": "file:../pkg"
   },
   "scripts": {
     "dev": "vite",

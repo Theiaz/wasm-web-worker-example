@@ -4,7 +4,7 @@
     "serve": "webpack serve --config webpack.config.js --open"
   },
   "dependencies": {
-    "hello-wasm": "file:../pkg"
+    "wasm-sum": "file:../pkg"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
