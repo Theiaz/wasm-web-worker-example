@@ -1,11 +1,7 @@
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
-extern {
-    pub fn alert(s: &str);
+pub fn sum(a: i32, b: i32) -> i32 {
+    a + b
 }
 
-#[wasm_bindgen]
-pub fn greet(name: &str) {
-    alert(&format!("Hello, {}!", name));
-}
