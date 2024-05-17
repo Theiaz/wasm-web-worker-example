@@ -7,5 +7,5 @@ onmessage = (msg: MessageEvent<{ number1: number; number2: number }>) => {
   const sum = wasm.sum(1, 2);
   debugger;
 
-  postMessage(3);
+  postMessage(sum);
 };
